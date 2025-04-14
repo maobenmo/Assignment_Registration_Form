@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles_assignment.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <form action="mailto:sample@mail.com" method="post" name="registration">
+    <h1>Registration Form</h1>
+
+    <fieldset>
+      <legend>Your basic info</legend>
+      <lable for="firstname">First Name:</lable>
+      <input class="textInput" type="text" id="firstname" name="user_fistname" required />
+
+      <lable for="lastname">Last Name:</lable>
+      <input class="textInput" type="text" id="lastname" name="user_lastname" required />
+
+      <lable for="mail">Email Address:</lable>
+      <input class="textInput" type="email" id="mail" name="user_mail" pattern=".+@example\.com" size="30"
+        title="Must be in the pattern .+@example\.com, size no more than 30" required />
+
+      <lable for="password">Password</lable>
+      <input class="textInput" type="password" id="password" name="user_password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        required>
+
+      <lable for="confirm_password">Confirm Password</lable>
+      <input class="textInput" type="password" id="confirm_password" name="user_confirmpassword"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+        required>
+    </fieldset>
+    <br />
+
+    <fieldset>
+      <legend>Other details</legend>
+      <lable for="birthdate">Date of Birth:</lable>
+      <input class="textInput" type="date" id="birthdate" name="user_bithdate" />
+
+      <lable>Gender:</lable><br />
+      <input type="radio" id="male" name="gender" value="male" /><label class="light" for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <lable class="light" for="female">Female</lable><br />
+      <input type="radio" id="other" name="gender" value="other" /><label class="light" for="other">Other</label><br />
+    </fieldset>
+    <br />
+
+    <fieldset>
+      <p><label for="aboutme">About me:</label></p>
+      <textarea id="aboutme" name="aboutme" rows="4" cols="50" placeholder="Describe yourself here..."></textarea>
+    </fieldset>
+
+    <fieldset>
+      <lable for="profession">Choose Your Profession</lable><br />
+      <select id="profession" name="profession">
+        <option value="Web">Web Development</option>
+        <option value="Data">Data Analytics</option>
+        <option value="UI">UI/UX Design</option>
+
+      </select>
+    </fieldset>
+    <br />
+
+    <fieldset>
+      <button type="submit">Sign Up</button>
+    </fieldset>
+  </form>
+
+
+
+</body>
+
+</html>
